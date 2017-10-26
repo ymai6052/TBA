@@ -27,7 +27,6 @@ public class GameRunner {
 
         School tech = new School(map);
 
-
         boolean gameOn = true;
         Person player1 = Utilities.createPerson();
         Scanner in = new Scanner(System.in);
@@ -40,18 +39,10 @@ public class GameRunner {
             String move = player1.chooseMove();
             Utilities.movePlayer(tech, player1,move);
             //gameOn = false;
-            
-
-
-
-
-
-
 
         }
 		in.close();
     }
-
 }
 
 
