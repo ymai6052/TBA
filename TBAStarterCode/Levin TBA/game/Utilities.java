@@ -4,6 +4,7 @@ import people.Person;
 import java.util.Scanner;
 public class Utilities {
 	public static String personname;
+	
 	public static Person createPerson() {
 		Scanner name=new Scanner(System.in);
 		personname=name.next();
