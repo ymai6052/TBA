@@ -19,26 +19,24 @@ public class GameRunner {
                 boolean[] doors = {true,true,true,true};
                 Person[] people = {};
                 Item[] items = {};
-
-                row[i] = new Hallway(doors, people, items, i, j);
             }
 
         }
 
-        School tech = new School(map);
+        Dungeon cave = new Dungeon(map);
 
         boolean gameOn = true;
         Person player1 = Utilities.createPerson();
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
-            System.out.println("Welcome to the Halls of Tech, " + player1.getFirstName(in.next()));
-            map[0][0].addOccupant(player1);
-            tech.printMap();
+        	
+            System.out.println("Welcome to the Endless Cave of Doom, " + player1.getFirstName(in.next()));
+            cave.printMap();
             player1.printRoom();
             String move = player1.chooseMove();
-            Utilities.movePlayer(tech, player1,move);
-            //gameOn = false;
+            Utilities.movePlayer(cave, player1,move);
+            gameOn = false;
 
         }
 		in.close();
