@@ -36,7 +36,6 @@ public class GameRunner {
             player1.printRoom();
             String move = player1.chooseMove();
             Utilities.movePlayer(cave, player1,move);
-            gameOn = false;
 
         }
 		in.close();
