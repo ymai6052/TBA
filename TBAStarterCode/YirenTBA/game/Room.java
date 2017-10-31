@@ -1,7 +1,4 @@
-package rooms;
-
-import people.Person;
-import items.Item;
+package game;
 
 import java.util.Arrays;
 
@@ -10,18 +7,19 @@ public abstract class Room {
     private boolean[] doors;
     private Person[] occupants;
     private Item[] items;
-    public boolean explored;
+    public String explored;
     private int x, y;
 
     public Room (int x, int y)
     {
     	this.x = x;
     	this.y = y;
+    	this.explored="false";
     	/*
         this.doors = doors;
         this.occupants = occupants;
         this.items = items;
-        this.explored = false;
+        
         */
     }
 /*
@@ -57,10 +55,7 @@ public abstract class Room {
     {
     	return y;
     }
-    public abstract void print();
+	public void print() {
 
-
-
-
-
+	}
 }

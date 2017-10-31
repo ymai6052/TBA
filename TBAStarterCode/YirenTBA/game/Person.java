@@ -1,6 +1,5 @@
-package people;
+package game;
 
-import rooms.Room;
 import java.util.Scanner;
 public class Person {
 	private String name;
@@ -26,7 +25,7 @@ public class Person {
 		return move;
 	}
 
-	public String getFirstName(String name) {
+	public String getFirstName() {
 		return name;
 	}
 }

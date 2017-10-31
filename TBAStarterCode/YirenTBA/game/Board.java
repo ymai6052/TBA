@@ -1,6 +1,4 @@
-package board;
-
-import rooms.Room;
+package game;
 
 public class Board {
 

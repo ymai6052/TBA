@@ -1,8 +1,5 @@
 package game;
 
-import people.Person;
-import rooms.Room;
-import board.Board;
 import java.util.Scanner;
 
 public class Utilities {
