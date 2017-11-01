@@ -15,7 +15,7 @@ public class Person {
 		
 	}
 
-	public String chooseMove() {
+	public void chooseMove() {
 		System.out.println("Would you like to go up, down, left or right?");
 		Scanner movement=new Scanner(System.in);
 		String move=movement.next();
@@ -25,8 +25,11 @@ public class Person {
 			currentroom[0]+=-1;
 		case "right":
 			currentroom[0]+=1;
+		case "down":
+			currentroom[1]+=-1;
+		case "up":
+			currentroom[1]+=1;
 		}
-		return move;
 	}
 
 	public String getFirstName() {

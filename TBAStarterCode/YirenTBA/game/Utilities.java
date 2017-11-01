@@ -11,7 +11,7 @@ public class Utilities {
 		String p1name=name.next();
 		Person p1=new Person();
 		Board current=new Board(map);
-		p1.Person(p1name,current.getDungMap());
+		p1.Person(p1name);
 		return p1;
 		//new
 	}
