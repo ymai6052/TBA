@@ -13,5 +13,6 @@ public class Utilities {
 		Board current=new Board(map);
 		p1.Person(p1name,current.getDungMap());
 		return p1;
+		//new
 	}
 }
