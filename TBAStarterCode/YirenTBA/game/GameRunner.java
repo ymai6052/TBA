@@ -19,19 +19,14 @@ public class GameRunner {
         */
         Dungeon cave = new Dungeon(map);
 
-        boolean onfloor = true;
+        boolean playing = true;
         Person player1 = Utilities.createPerson(map);
-        Scanner in = new Scanner(System.in);
-        while(onfloor)
-        {
-        	
+        
             System.out.println("Welcome to the Endless Cave of Doom, " + player1.getFirstName());
-            cave.printMap();
-            player1.printRoom();
+            while(playing)
+            {
             player1.chooseMove();
-            
-        }
-		in.close();
+            }
     }
 }
 
