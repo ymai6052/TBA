@@ -25,7 +25,8 @@ public class GameRunner {
             System.out.println("Welcome to the Endless Cave of Doom, " + player1.getFirstName());
             while(playing)
             {
-            player1.chooseMove();
+            	//cave.printMap();
+            	player1.chooseMove();
             }
     }
 }

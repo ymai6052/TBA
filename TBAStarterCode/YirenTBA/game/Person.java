@@ -15,13 +15,17 @@ public class Person {
 		{
 			if(i==xpos)
 			{
-				for(int y=0;y<9;y++)
+				for(int y=0;y<10;y++)
 				{
 					if(y==ypos)
 					{
 						System.out.print("1 ");
+						y++;
 					}
+					if(y<10)
+					{
 					System.out.print("0 ");
+					}
 				}
 			}
 			else
@@ -39,22 +43,42 @@ public class Person {
 		String move=movement.next();
 		if(move.equals("left")) 
 		{
-			currentroom[0]+=-1;
+			currentroom[1]+=-1;
 			System.out.println("you moved left");
+			if(currentroom[1]<0)
+			{
+				currentroom[1]+=+1;
+				System.out.print("you hit a wall going left.");
+			}
 		}
 		if(move.equals("right")) {
-			currentroom[0]+=+1;
+			currentroom[1]+=+1;
 			System.out.println("you moved right");
+			if(currentroom[1]>10)
+			{
+				currentroom[1]+=-1;
+				System.out.print("you hit a wall going right.");
+			}
 		}
 		if(move.equals("down")) {
-			currentroom[1]+=-1;
+			currentroom[0]+=+1;
 			System.out.println("you moved down");
+			if(currentroom[0]>10)
+			{
+				currentroom[0]+=-1;
+				System.out.print("you hit a wall going down.");
+			}
 		}
 		if(move.equals("up")) {
-			currentroom[1]+=+1;
+			currentroom[0]+=-1;
 			System.out.println("you moved up");
+			if(currentroom[0]<0)
+			{
+				currentroom[0]+=1;
+				System.out.print("you hit a wall going up.");
+			}
 		}
-		System.out.print(currentroom[0]+" y= "+currentroom[1]);
+		System.out.print("x= "+currentroom[0]+" y= "+currentroom[1]);
 		System.out.println();
 		printdungeon(currentroom[0],currentroom[1]);
 	}
